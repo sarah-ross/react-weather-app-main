@@ -1,0 +1,46 @@
+.App {
+	font-family: "Quicksand", sans-serif;
+	text-align: center;
+}
+
+.App .card {
+	max-width: 700px;
+	display: block;
+	margin: 0 auto;
+	border-width: 3px;
+	border-style: solid;
+	border-image: linear-gradient(
+			45deg,
+			rgb(159, 131, 216),
+			rgb(27, 245, 241)
+		)
+		1;
+}
+
+.App h1 {
+	font-weight: 700;
+	font-size: 50px;
+	color: #3a3a3a;
+}
+
+.App .portfolioLink {
+	text-decoration: none;
+	font-weight: 800;
+	color: rgb(159, 131, 216);
+	transition: all 425ms ease-in-out;
+}
+
+.App .portfolioLink:hover {
+	color: rgb(27, 245, 241);
+}
+
+.App .githubLink {
+	text-decoration: none;
+	font-weight: 800;
+	color: rgb(27, 245, 241);
+	transition: all 425ms ease-in-out;
+}
+
+.App .githubLink:hover {
+	color: rgb(159, 131, 216);
+}
