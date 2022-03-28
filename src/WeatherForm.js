@@ -36,16 +36,27 @@ export default function WeatherForm() {
 
 	let form = (
 		<div className="WeatherForm">
-			<form className="mt-4" onSubmit={handleSubmit}>
-				<input
-					className="m-3 p-2 searchBox"
-					type="search"
-					placeholder="Enter a city..."
-					onChange={updateCity}
-				/>
-				<button type="submit" class="btn btn-primary">
-					Search
-				</button>
+			<form
+				className="weatherSearch"
+				onSubmit={handleSubmit}>
+				<div className="row">
+					<div className="col">
+						<input
+							className="form-control searchBox"
+							type="search"
+							placeholder="Enter a city..."
+							autoFocus="on"
+							onChange={updateCity}
+						/>
+					</div>
+					<div className="col">
+						<button
+							className="btn btn-primary"
+							type="submit">
+							Search
+						</button>
+					</div>
+				</div>
 			</form>
 		</div>
 	);
@@ -54,26 +65,28 @@ export default function WeatherForm() {
 		return (
 			<div className="WeatherForm">
 				{form}
-				<div className="row">
-					<div className="col">
-						<h3>
-							<span>
-								<WeatherIcon
-									code={weather.icon}
-									alt={weather.description}
-									size={54}
-								/>
-								{Math.round(weather.temperature)}
-								<small>ºC</small>
-							</span>
-						</h3>
-					</div>
-					<div className="col">
-						<ul className="mt-4">
-							<li>Humidity: {weather.humidity}%</li>
-							<li>Wind: {weather.temperature}km/hr</li>
-							<li>Description: {weather.description}</li>
-						</ul>
+					<div className="container">
+					<div className="row">
+						<div className="col">
+							<h3>
+								<span>
+									<WeatherIcon
+										code={weather.icon}
+										alt={weather.description}
+										size={56}
+									/>
+									{Math.round(weather.temperature)}
+									<small>ºC</small>
+								</span>
+							</h3>
+						</div>
+						<div className="col">
+							<ul className="mt-4">
+								<li>Humidity: {weather.humidity}%</li>
+								<li>Wind: {weather.temperature}km/hr</li>
+								<li>Description: {weather.description}</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<WeatherForecast

@@ -7,7 +7,7 @@ export default function App() {
 	return (
 		<div className="App">
 			<div className="card mt-5">
-				<h1 className="mt-5">
+				<h1>
 					<span>React</span> Weather App
 				</h1>
 				<WeatherForm />

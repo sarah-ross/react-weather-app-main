@@ -1,6 +1,5 @@
 .App {
 	font-family: "Quicksand", sans-serif;
-	text-align: center;
 }
 
 .App .card {
@@ -18,14 +17,22 @@
 }
 
 .App h1 {
-	font-weight: 500;
-	font-size: 54px;
+	text-align: left;
+	margin-top: 30px;
+	margin-left: 30px;
+	font-weight: 400;
+	font-size: 26px;
 	color: #757575;
 }
 
 .App h1 span {
+	font-family: brevia, sans-serif;
 	font-weight: 700;
-	color: rgb(159, 131, 216);
+}
+
+.App footer {
+	text-align: center;
+	color: #757575;
 }
 
 .App .portfolioLink {
