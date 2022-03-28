@@ -1,0 +1,10 @@
+.WeatherForecast {
+	text-align: center;
+	color: #757575;
+	margin-top: 25px;
+	margin-bottom: 15px;
+}
+
+.WeatherForecast .icon {
+	margin-bottom: 13px;
+}

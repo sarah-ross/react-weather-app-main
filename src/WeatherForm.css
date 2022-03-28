@@ -35,19 +35,29 @@
 	border-radius: 0;
 }
 
+.WeatherForm h3,
+li,
+small {
+	position: relative;
+}
+
 .WeatherForm h3 {
-	color: #3a3a3a;
-	font-size: 46px;
+	color: #757575;
+	font-size: 48px;
 	font-weight: 600;
+	left: 45px;
+	top: 20px;
 }
 
 .WeatherForm small {
 	font-size: 22px;
-	position: relative;
-	bottom: 15px;
+	bottom: 18px;
 }
 
 .WeatherForm li {
+	text-align: left;
 	list-style: none;
-	font-size: 18px;
+	font-size: 16px;
+	color: #757575;
+	right: 46px;
 }

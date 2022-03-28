@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherIcon from "./WeatherIcon";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 
 import "./WeatherForm.css";
@@ -10,7 +11,9 @@ export default function WeatherForm() {
 	const [loaded, setLoaded] = useState(false);
 
 	function displayWeather(response) {
+		console.log(response.data);
 		setWeather({
+			coordinates: response.data.coord,
 			temperature: response.data.main.temp,
 			wind: response.data.wind.speed,
 			humidity: response.data.main.humidity,
@@ -51,21 +54,31 @@ export default function WeatherForm() {
 		return (
 			<div className="WeatherForm">
 				{form}
-				<h3>
-					<span>
-						<WeatherIcon
-							code={weather.icon}
-							alt={weather.description}
-						/>
-						{Math.round(weather.temperature)}
-						<small>ºC</small>
-					</span>
-				</h3>
-				<ul className="mt-4">
-					<li>Humidity: {weather.humidity}%</li>
-					<li>Wind: {weather.temperature}km/hr</li>
-					<li>Description: {weather.description}</li>
-				</ul>
+				<div className="row">
+					<div className="col">
+						<h3>
+							<span>
+								<WeatherIcon
+									code={weather.icon}
+									alt={weather.description}
+									size={54}
+								/>
+								{Math.round(weather.temperature)}
+								<small>ºC</small>
+							</span>
+						</h3>
+					</div>
+					<div className="col">
+						<ul className="mt-4">
+							<li>Humidity: {weather.humidity}%</li>
+							<li>Wind: {weather.temperature}km/hr</li>
+							<li>Description: {weather.description}</li>
+						</ul>
+					</div>
+				</div>
+				<WeatherForecast
+					coordinates={weather.coordinates}
+				/>
 			</div>
 		);
 	} else {

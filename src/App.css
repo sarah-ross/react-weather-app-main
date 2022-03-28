@@ -18,9 +18,14 @@
 }
 
 .App h1 {
+	font-weight: 500;
+	font-size: 54px;
+	color: #757575;
+}
+
+.App h1 span {
 	font-weight: 700;
-	font-size: 50px;
-	color: #3a3a3a;
+	color: rgb(159, 131, 216);
 }
 
 .App .portfolioLink {
