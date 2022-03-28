@@ -45,7 +45,9 @@ small {
 	position: relative;
 }
 
-.WeatherForm h3, ul, li {
+.WeatherForm h3,
+ul,
+li {
 	text-align: center;
 }
 
@@ -62,10 +64,26 @@ small {
 	list-style: none;
 	font-size: 16px;
 	color: #757575;
-	right: 22px;
+	right: 26px;
 }
 
 .WeatherForm small {
 	font-size: 22px;
 	bottom: 18px;
+}
+
+@media (max-width: 766px) {
+	.WeatherForm h3,
+	ul,
+	li {
+		position: unset;
+	}
+
+	.WeatherForm h3 {
+		margin-top: 22px;
+	}
+
+	.WeatherForm ul li {
+		font-size: 14px;
+	}
 }
