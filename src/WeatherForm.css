@@ -53,10 +53,10 @@ li {
 
 .WeatherForm h3 {
 	color: #757575;
-	font-size: 48px;
+	font-size: 55px;
 	font-weight: 600;
 	left: 36px;
-	top: 20px;
+	top: 30px;
 }
 
 .WeatherForm li {
@@ -65,11 +65,12 @@ li {
 	font-size: 16px;
 	color: #757575;
 	right: 26px;
+	line-height: 22px;
 }
 
 .WeatherForm small {
 	font-size: 22px;
-	bottom: 18px;
+	bottom: 22px;
 }
 
 @media (max-width: 766px) {

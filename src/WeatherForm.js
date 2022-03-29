@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import WeatherIcon from "./WeatherIcon";
 import WeatherForecast from "./WeatherForecast";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 
 import "./WeatherForm.css";
@@ -14,6 +15,7 @@ export default function WeatherForm() {
 		console.log(response.data);
 		setWeather({
 			coordinates: response.data.coord,
+			date: new Date(response.data.dt * 1000),
 			temperature: response.data.main.temp,
 			wind: response.data.wind.speed,
 			humidity: response.data.main.humidity,
@@ -65,7 +67,7 @@ export default function WeatherForm() {
 		return (
 			<div className="WeatherForm">
 				{form}
-					<div className="container">
+				<div className="container">
 					<div className="row">
 						<div className="col">
 							<h3>
@@ -73,7 +75,7 @@ export default function WeatherForm() {
 									<WeatherIcon
 										code={weather.icon}
 										alt={weather.description}
-										size={56}
+										size={58}
 									/>
 									{Math.round(weather.temperature)}
 									<small>ºC</small>
@@ -82,6 +84,9 @@ export default function WeatherForm() {
 						</div>
 						<div className="col">
 							<ul className="mt-4">
+								<li>
+									<FormattedDate date={weather.date} />
+								</li>
 								<li>Humidity: {weather.humidity}%</li>
 								<li>Wind: {weather.temperature}km/hr</li>
 								<li>Description: {weather.description}</li>
