@@ -12,7 +12,6 @@ export default function WeatherForm() {
 	const [loaded, setLoaded] = useState(false);
 
 	function displayWeather(response) {
-		console.log(response.data);
 		setWeather({
 			coordinates: response.data.coord,
 			date: new Date(response.data.dt * 1000),

@@ -29,6 +29,13 @@ export default function WeatherForecastDay(props) {
 		return days[day];
 	}
 
+	function weatherCondition() {
+		let weatherCondition =
+			props.data.weather[0].description;
+
+		return weatherCondition;
+	}
+
 	return (
 		<div className="WeatherForecastDay">
 			<div className="row">
@@ -48,6 +55,9 @@ export default function WeatherForecastDay(props) {
 						<strong>{maxTemperature()}</strong>{" "}
 						{minTemperature()}
 					</span>
+					<div className="weatherCondition">
+						{weatherCondition()}
+					</div>
 				</div>
 			</div>
 		</div>

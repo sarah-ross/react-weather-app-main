@@ -1,7 +1,21 @@
+.WeatherForecastDay .weatherCondition {
+	font-size: 11px;
+}
+
 @media (max-width: 766px) {
 	.WeatherForecastDay .day,
 	.temperature {
 		font-size: 14px;
+	}
+
+	.WeatherForecastDay .weatherCondition {
+		font-size: 10px;
+	}
+}
+
+@media (max-width: 524px) {
+	.WeatherForecastDay .weatherCondition {
+		display: none;
 	}
 }
 
