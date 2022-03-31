@@ -4,3 +4,10 @@
 		font-size: 14px;
 	}
 }
+
+@media (max-width: 425px) {
+	.WeatherForecastDay .day,
+	.temperature {
+		font-size: 11px;
+	}
+}

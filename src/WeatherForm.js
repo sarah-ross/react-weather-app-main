@@ -89,7 +89,9 @@ export default function WeatherForm() {
 								</li>
 								<li>Humidity: {weather.humidity}%</li>
 								<li>Wind: {weather.temperature}km/hr</li>
-								<li>Description: {weather.description}</li>
+								<li className="weatherCondition">
+									Condition: {weather.description}
+								</li>
 							</ul>
 						</div>
 					</div>
