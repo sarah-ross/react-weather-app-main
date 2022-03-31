@@ -110,6 +110,7 @@ li {
 
 	@media (max-width: 396px) {
 		.WeatherForm h3 {
+			margin-top: 20px;
 			font-size: 41px;
 		}
 
