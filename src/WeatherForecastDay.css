@@ -13,7 +13,7 @@
 	}
 }
 
-@media (max-width: 524px) {
+@media (max-width: 527px) {
 	.WeatherForecastDay .weatherCondition {
 		display: none;
 	}
